@@ -45,8 +45,6 @@ end
 # gem 'debugger', group: [:development, :test]
 
 
-gem 'CoffeeScript'
-
 group :development do #beautiful errors
 	gem 'better_errors'
 	gem 'quiet_assets'
