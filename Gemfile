@@ -54,7 +54,7 @@ end
 
 #see e-mails without delivering them
 
-gem 'mail_view', '~> 1.0.3'
+gem 'mail_view'
 
 #HTML templating
 
