@@ -1,21 +1,16 @@
-
-<div class="panel panel-default pull-left ">
-	<div class="row">
-		<div class="col-sm-6">
+<%= link_to 'Back', pins_path, class: "btn btn-md btn-danger" %>
+<div class="row">
+	<div class="col-md-offset-2 col-md-8">
+		<div class="panel panel-default pull-left">
 			<%= image_tag @pin.image.url, class: "show-image" %>
-		</div>
-	</div>
-	<div class="show-info">
-		<p>
-		  <h3 class="sr-only">Description:</h3>
-		  <h3><%= @pin.description %><h3>
-		</p>
-		<div class="pull-right">
-			<% if @pin.user == current_user %>
-				<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-xs btn-info" %>
-			<% end %>
-			<%= link_to 'Back', pins_path, class: "btn btn-xs btn-info" %>
-		</div>
-		<div class="clearfix"></div>
+			<div class="panel-body">
+				<p>
+				  <h4><strong><%= @pin.description %></strong><h4>
+			  	<h5><%= @pin.user.email if @pin.user %></h5>
+				</p>
+				<% if @pin.user == current_user %>
+					<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-xs btn-info" %>
+				<% end %>
+				<div class="clearfix"></div>
 	</div>
 </div>
