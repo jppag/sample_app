@@ -26,6 +26,8 @@ gem 'devise', '~> 3.2.2'
 
 gem 'paperclip', '~> 3.0'
 
+gem 'aws-sdk', '~> 1.32.0'
+
 #Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.0.3.0'
 
