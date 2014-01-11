@@ -67,6 +67,18 @@ $grid-gutter-width: 								30px;
 	width: 400px;
 }
 
+.actions {
+	margin-top: 10px;
+}
+
+.actions a {
+	color: #9e0e00;
+	margin-right: 5px;
+}
+
+.underline-none a:hover {
+	text-decoration: none;
+}
 
 
 

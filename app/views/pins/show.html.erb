@@ -1,4 +1,9 @@
-<%= link_to 'Back', pins_path, class: "btn btn-md btn-danger" %>
+<%= link_to pins_path do %>
+	<div class="mb-40">
+		<span class="glyphicon glyphicon-chevron-left"></span>
+		Back
+	</div>
+<% end %>
 <div class="row">
 	<div class="col-md-offset-2 col-md-8">
 		<div class="panel panel-default pull-left">
@@ -8,8 +13,13 @@
 				  <h4><strong><%= @pin.description %></strong><h4>
 			  	<h5><%= @pin.user.email if @pin.user %></h5>
 				</p>
-				<% if @pin.user == current_user %>
-					<%= link_to 'Edit', edit_pin_path(@pin), class: "btn btn-xs btn-info" %>
+				<% if @pin.user == current_user %>	
+					<div class= "actions">
+						<%= link_to edit_pin_path(@pin) do %>
+							<span class="glyphicon glyphicon-edit"></span>
+							Edit
+					</div>
+					<% end %>
 				<% end %>
 				<div class="clearfix"></div>
 	</div>
