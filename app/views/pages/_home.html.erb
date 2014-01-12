@@ -1,8 +1,27 @@
-<div class="jumbotron center">
-	<h1>Welcome to my app!</h1>
-	<div class="row pad20">
-		<%= link_to "Log in", new_user_session_path, class: "btn btn-danger btn-lg"  %>
-		<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg "  %>
-	</div>
-</div>
+<% if user_signed_in? %>
 
+	<div class="full-bg">
+		<div class="img-responsive top-image">
+			<div class="container center">
+				<div class="background-heading img-rounded">
+					<h1>Share your favorite pins!</h1>
+				</div>
+				<button class="btn btn-success btn-lg">
+					<%= link_to "Add a new Pin", new_pin_path %>
+				</button>
+			</div>
+		</div>
+
+	</div>
+
+<% else %>
+
+	<div class="jumbotron center">
+		<h1>Welcome to my app!</h1>
+		<div class="row pad20">
+			<%= link_to "Log in", new_user_session_path, class: "btn btn-danger btn-lg"  %>
+			<%= link_to "Sign Up", new_user_registration_path, class: "btn btn-primary btn-lg "  %>
+		</div>
+	</div>
+
+<% end %>
