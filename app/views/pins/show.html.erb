@@ -11,7 +11,7 @@
 			<div class="panel-body">
 				<p>
 				  <h4><strong><%= @pin.description %></strong><h4>
-			  	<h5><%= @pin.user.email if @pin.user %></h5>
+			  	<h5><%= @pin.user.name if @pin.user %></h5>
 				</p>
 				<% if @pin.user == current_user %>	
 					<div class= "actions">
