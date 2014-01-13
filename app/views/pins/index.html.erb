@@ -1,5 +1,9 @@
 <%= render 'pages/home' %>
 
+<div class="pull-right">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
+</div>
+<div class="clearfix"></div>
 <div id="pins" class="transitions-enabled">
   <!-- Creates a Loop -->
   <% @pins.each do |pin| %>
@@ -23,4 +27,8 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="center">
+  <%= will_paginate @posts, renderer: BootstrapPagination::Rails %>
 </div>

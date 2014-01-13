@@ -31,7 +31,9 @@ gem 'aws-sdk', '~> 1.32.0'
 
 gem 'masonry-rails', '~> 0.2.1'
 
+gem 'will_paginate', '~> 3.0'
 
+gem 'will_paginate-bootstrap'
 
 #Bootstrap SASS
 gem 'bootstrap-sass', '~> 3.0.3.0'
